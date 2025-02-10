@@ -1,0 +1,14 @@
+{
+  "hammer_hit": {
+    "subtitle": "sounds.lets-do-quest-items.hammer_hit",
+    "sounds": [
+      "lets-do-quest-items:hammer_hit"
+    ]
+  },
+  "hammer_leap": {
+    "subtitle": "sounds.lets-do-quest-items.hammer_leap",
+    "sounds": [
+      "lets-do-quest-items:hammer_leap"
+    ]
+  }
+}

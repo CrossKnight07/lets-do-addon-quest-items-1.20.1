@@ -1,5 +1,8 @@
 package net.cr055.letsdoquestitems;
 
+import net.cr055.letsdoquestitems.item.ModItemGroups;
+import net.cr055.letsdoquestitems.item.ModItems;
+import net.cr055.letsdoquestitems.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +14,8 @@ public class LetsDoAddonQuestItems implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
+		ModSounds.registerSounds();
 	}
 }
