@@ -11,6 +11,7 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item ANCIENT_BANNER = registerItem("ancient_banner", new Item(new FabricItemSettings()));
@@ -64,7 +65,7 @@ public class ModItems {
     public static final Item HEALING_HERB = registerItem("healing_herb", new Item(new FabricItemSettings()));
 
     public static final Item HEARTHSTEAD_BRIGADE_WARHAMMER = registerItem("hearthstead_brigade_warhammer",
-            new HammerItem(ToolMaterials.NETHERITE, 3, -3.0f, new Item.Settings().fireproof()));
+            new HammerItem(ToolMaterials.NETHERITE, 3, -3.0f, new Item.Settings().fireproof().rarity(Rarity.EPIC)));
 
     public static final Item IRON_CUFFS = registerItem("iron_cuffs", new Item(new FabricItemSettings()));
     public static final Item IRON_KEY = registerItem("iron_key", new Item(new FabricItemSettings()));

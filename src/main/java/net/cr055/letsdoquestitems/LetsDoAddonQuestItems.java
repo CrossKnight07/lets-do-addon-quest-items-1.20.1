@@ -1,5 +1,6 @@
 package net.cr055.letsdoquestitems;
 
+import net.cr055.letsdoquestitems.event.HammerEvent;
 import net.cr055.letsdoquestitems.item.ModItemGroups;
 import net.cr055.letsdoquestitems.item.ModItems;
 import net.cr055.letsdoquestitems.sound.ModSounds;
@@ -17,5 +18,7 @@ public class LetsDoAddonQuestItems implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModSounds.registerSounds();
+
+		HammerEvent.register();
 	}
 }
