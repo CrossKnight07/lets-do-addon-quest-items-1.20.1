@@ -16,8 +16,9 @@ public class TooltipItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack itemStack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        String key = itemStack.getItem().getTranslationKey() + ".tooltip." + itemStack.getItem().getTranslationKey();
-        tooltip.add(Text.translatable(key));
+        String baseKey = itemStack.getItem().getTranslationKey() + ".tooltip.";
+        tooltip.add(Text.translatable(baseKey + itemStack.getItem() + ".line1"));
+        tooltip.add(Text.translatable(baseKey + itemStack.getItem() + ".line2"));
         super.appendTooltip(itemStack, world, tooltip, context);
     }
 }

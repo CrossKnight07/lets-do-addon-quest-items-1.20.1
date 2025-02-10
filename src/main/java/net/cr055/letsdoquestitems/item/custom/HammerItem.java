@@ -25,13 +25,13 @@ public class HammerItem extends SwordItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 10);
+        user.getItemCooldownManager().set(this, 50);
         HammerItem.setItem(itemStack);
 
         if (user.isOnGround()) {
             user.addVelocity(user.getRotationVector().multiply(1.5F));
 
-            user.playSound(ModSounds.HAMMER_LEAP_SOUND, 0.5f, 1f);
+            user.playSound(ModSounds.HAMMER_LEAP_SOUND, 0.75f, 1f);
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
@@ -41,7 +41,7 @@ public class HammerItem extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker instanceof PlayerEntity player) {
-            player.playSound(ModSounds.HAMMER_HIT_SOUND, -1f, 1f);
+            player.playSound(ModSounds.HAMMER_HIT_SOUND, 1f, 1f);
         }
         return super.postHit(stack, target, attacker);
     }
