@@ -2,6 +2,7 @@ package net.cr055.letsdoquestitems.item;
 
 import net.cr055.letsdoquestitems.LetsDoAddonQuestItems;
 import net.cr055.letsdoquestitems.item.custom.HammerItem;
+import net.cr055.letsdoquestitems.item.custom.TooltipItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -14,7 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class ModItems {
-    public static final Item ANCIENT_BANNER = registerItem("ancient_banner", new Item(new FabricItemSettings()));
+    public static final Item ANCIENT_BANNER = registerItem("ancient_banner", new TooltipItem(new FabricItemSettings()));
     public static final Item ANCIENT_COIN = registerItem("ancient_coin", new Item(new FabricItemSettings()));
     public static final Item ANCIENT_RUNE = registerItem("ancient_rune", new Item(new FabricItemSettings()));
     public static final Item ANCIENT_TABLET = registerItem("ancient_tablet", new Item(new FabricItemSettings()));
